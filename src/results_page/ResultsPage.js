@@ -3,9 +3,12 @@ import {STATES} from "../consts";
 
 class ResultsPage extends Component {
   render() {
-    return (
+      const { mainState } = this.props;
+      const { appliedTools } = mainState;
+
+      return (
         <div>
-            Strona Results Page
+            {!appliedTools.capslock ? 'Bez kapslocka to smutno' : 'Kapslock wiec spoko'}
             <button onClick={() => this.props.transferTo(STATES.TASK)}>
                 chce inaczej
             </button>

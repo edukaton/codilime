@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import {STATES} from "../consts";
+import { toPairs } from "lodash";
 
 class Toolbox extends Component {
   render() {
+    const { toolbox, onToolClick } = this.props;
+
     return (
         <div>
             Narzędziownik
-            <div>
-                Narzędzie nr 1
-            </div>
-            <div>
-                Narzędzie nr 2
-            </div>
-            <div>
-                Narzędzie nr 3
-            </div>
+            {toPairs(toolbox).map(([key, value]) =>
+                <div
+                    key={key}
+                    onClick={() => onToolClick(key)}
+                >
+                    {key}
+                </div>)
+            }
         </div>
     );
   }

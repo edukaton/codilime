@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import './Layout.css';
 import StartPage from "./start_page/StartPage";
 import LearningPage from "./learning_page/LearningPage";
 import TaskPage from "./task_page/TaskPage";
 import ResultsPage from "./results_page/ResultsPage";
-import { STATES } from './consts';
+import {STATES} from './consts';
 
 const INITIAL_STATE = {
     currentPage: 'start',
+    toolbox: {},
+    appliedTools: {},
 };
 
 class App extends Component {
@@ -18,7 +20,7 @@ class App extends Component {
         this.state = INITIAL_STATE;
     }
 
-  render() {
+    render() {
         let MainComponent;
 
         switch (this.state.currentPage) {
@@ -42,18 +44,20 @@ class App extends Component {
                 MainComponent = StartPage;
         }
 
-    return (
-      <div className="App">
-        <MainComponent
-            transferTo={this.transferTo}
-        />
-      </div>
-    );
-  }
+        return (
+            <div className="App">
+                <MainComponent
+                    transferTo={this.transferTo}
+                    setState={(updater) => this.setState(updater)}
+                    mainState={this.state}
+                />
+            </div>
+        );
+    }
 
-  transferTo = (pageName) => {
+    transferTo = (pageName) => {
         this.setState({currentPage: pageName});
-  }
+    }
 }
 
 export default App;
