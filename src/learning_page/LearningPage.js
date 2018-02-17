@@ -27,6 +27,7 @@ class LearningPage extends Component {
                 <div className={'side'}>
                     <Toolbox
                         toolbox={mainState.toolbox}
+                        activeTool={mainState.activeTool}
                         onToolClick={(tool) => console.log(tool)}
                     />
                 </div>

@@ -3,7 +3,7 @@ import { toPairs } from "lodash";
 
 class Toolbox extends Component {
   render() {
-    const { toolbox, onToolClick } = this.props;
+    const { toolbox, onToolClick, activeTool } = this.props;
 
     return (
         <div>
@@ -12,6 +12,7 @@ class Toolbox extends Component {
                 <div
                     key={key}
                     onClick={() => onToolClick(key)}
+                    className={activeTool === key ? 'active-tool' : 'inactive-tool'}
                 >
                     {key}
                 </div>)

@@ -9,16 +9,36 @@ import VariableText from "../components/VariableText";
 import { metricApply, metricUnApply} from "../toolLibrary";
 
 class TaskPage extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {}
+    }
+
     toolClickHandler = (tool) => {
       this.props.setState((state) => {
           return {
-              appliedTools: {
-                  ...state.appliedTools,
-                  [tool]: !state.appliedTools[tool],
-              },
-              metrics: state.appliedTools[tool]? metricUnApply[tool](state.metrics) : metricApply[tool](state.metrics)
+              activeTool: state.activeTool === tool? false : tool,
           }
       })
+  };
+
+  textClickHandler = (id, active) => {
+      if (active) {
+          this.props.setState((state) => {
+              const tool = state.activeTool;
+
+              return {
+                  activeTool: false,
+                  appliedTools: {
+                      ...state.appliedTools,
+                      [id]: state.appliedTools[id] === tool ? false : tool,
+                  },
+                  metrics: state.appliedTools[id] === tool ?
+                      metricUnApply[tool](state.metrics) : metricApply[tool](state.metrics)
+              }
+          })
+      }
   };
 
   render() {
@@ -30,22 +50,26 @@ class TaskPage extends Component {
             <div className={'main'}>
                 <div className={'text'}>
                     <VariableText
+                        activeTool={mainState.activeTool}
                         toolsState={mainState.appliedTools}
+                        chunkClick={this.textClickHandler}
                     />
                 </div>
                 <div className={'side'}>
                     sidebar
                     <Toolbox
                         toolbox={mainState.toolbox}
+                        activeTool={mainState.activeTool}
                         onToolClick={(tool) => this.toolClickHandler(tool)}
                     />
                 </div>
             </div>
             <div className={'bottom'}>
                 <div className={'sliders'}>
-                    Capslockatowosc: {mainState.metrics.A} <Slider value={mainState.metrics.A} disabled={true}/>
-                    Zielonosc: {mainState.metrics.B} <Slider value={mainState.metrics.B} disabled={true}/>
-                    Miekkosc: {mainState.metrics.C} <Slider value={mainState.metrics.C} disabled={true}/>
+                    Klikalność: {mainState.metrics.A} <Slider value={mainState.metrics.A} disabled={true}/>
+                    Prawdziwość: {mainState.metrics.B} <Slider value={mainState.metrics.B} disabled={true}/>
+                    Manipulacja: {mainState.metrics.C} <Slider value={mainState.metrics.C} disabled={true}/>
+                    Zaufanie: {mainState.metrics.D} <Slider value={mainState.metrics.D} disabled={true}/>
                 </div>
                 <button onClick={() => this.props.transferTo(STATES.LEARNING)}>
                     wiecej info

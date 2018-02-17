@@ -16,6 +16,7 @@ html, body, #root, .App {
   .text {
     flex-grow: 3;
     padding: 40px;
+    overflow-y: auto;
   }
 
   .side {
@@ -25,5 +26,35 @@ html, body, #root, .App {
 
   .bottom {
     padding: 40px;
+  }
+}
+
+.active-target {
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.manipulated-target {
+  color: firebrick;
+  cursor: pointer;
+}
+
+.active-tool {
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes color {
+  0% {
+    color: #222;
+  }
+  50% {
+    color: #4285f4;
+  }
+  100% {
+    color: #222;
   }
 }
