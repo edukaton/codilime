@@ -6,6 +6,9 @@ class ResultsPage extends Component {
     return (
         <div>
             Strona Results Page
+            <button onClick={() => this.props.transferTo(STATES.TASK)}>
+                chce inaczej
+            </button>
             <button onClick={() => this.props.transferTo(STATES.START)}>
                 ok dzieki
             </button>

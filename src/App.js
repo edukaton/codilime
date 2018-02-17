@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './Layout.css';
 import StartPage from "./start_page/StartPage";
 import LearningPage from "./learning_page/LearningPage";
 import TaskPage from "./task_page/TaskPage";

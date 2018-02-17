@@ -1,0 +1,16 @@
+.LearningPage, .TaskPage {
+  display: flex;
+  flex-direction: column;
+  .main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .text {
+    flex-grow: 3;
+  }
+
+  .side {
+    flex-grow: 1;
+  }
+}
