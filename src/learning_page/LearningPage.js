@@ -30,9 +30,12 @@ class LearningPage extends Component {
                     </div>
                 </div>
                 <div className={'bottom'}>
-                    <button onClick={() => this.props.transferTo(STATES.TASK)}>
-                        juz umiem
-                    </button>
+                    <div className={'sliders'}/>
+                    <div className={'buttons'}>
+                        <button onClick={() => this.props.transferTo(STATES.TASK)}>
+                            juz umiem
+                        </button>
+                    </div>
                 </div>
             </div>
         );

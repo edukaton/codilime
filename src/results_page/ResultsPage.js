@@ -7,14 +7,16 @@ class ResultsPage extends Component {
       const { appliedTools } = mainState;
 
       return (
-        <div>
-            {!appliedTools.capslock ? 'Bez kapslocka to smutno' : 'Kapslock wiec spoko'}
-            <button onClick={() => this.props.transferTo(STATES.TASK)}>
-                chce inaczej
-            </button>
-            <button onClick={() => this.props.transferTo(STATES.START)}>
-                ok dzieki
-            </button>
+        <div className={'ResultsPage'}>
+            <div>
+                {!appliedTools.capslock ? 'Bez kapslocka to smutno' : 'Kapslock wiec spoko'}
+                <button onClick={() => this.props.transferTo(STATES.TASK)}>
+                    chce inaczej
+                </button>
+                <button onClick={() => this.props.transferTo(STATES.START)}>
+                    ok dzieki
+                </button>
+            </div>
         </div>
     );
   }

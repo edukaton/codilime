@@ -46,6 +46,12 @@ html, body, #root, .App {
     .sliders {
       flex-grow: 3;
       padding: 40px;
+      display: flex;
+      flex-direction: row;
+      >div {
+        flex-grow: 1;
+        padding: 10px;
+      }
     }
     .buttons {
       align-items: center;
@@ -56,6 +62,16 @@ html, body, #root, .App {
       min-width: 200px;
     }
   }
+}
+
+.ResultsPage, .StartPage {
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+  justify-items: center;
+
+  height: 100%;
 }
 
 .active-target {
