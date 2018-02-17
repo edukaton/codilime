@@ -45,7 +45,6 @@ class TaskPage extends Component {
 
       return (
         <div className={'TaskPage'}>
-            Strona Task Page
             <div className={'main'}>
                 <div className={'text'}>
                     <VariableText

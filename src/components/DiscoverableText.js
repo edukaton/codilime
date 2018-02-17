@@ -14,26 +14,22 @@ class DiscoverableText extends Component {
                         callback={onToolDiscover}
                         question={{
                             text: 'Czy to prawda?',
-                            answerA: 'Ni',
-                            answerB: 'Oj',
-                            answerC: 'Hyh',
-                            answerD: 'Uważam że żaby',
+                            answers: ['Ni', 'Oj', 'Hyh', 'Uważam że żaby'],
+                            correctAnswer: 2,
                         }}
                     >
                         !!!!!!!!!!!!!!!!
                     </DiscoverableChunk>
                 </h1>
-                Czy wiecie kto powyjadal
+                Czy wiecie kto powyjadal &nbsp;
 
                 <DiscoverableChunk
                     toolname={'capslock'}
                     callback={onToolDiscover}
                     question={{
                         text: 'Czy to prawda?',
-                        answerA: 'Ni',
-                        answerB: 'Oj',
-                        answerC: 'Hyh',
-                        answerD: 'Uważam że żaby',
+                        answers: ['Ni', 'Oj', 'Hyh', 'Uważam że żaby'],
+                        correctAnswer: 0,
                     }}
                 >
                     WSZYSTKIE PORZECZKI

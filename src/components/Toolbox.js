@@ -14,7 +14,6 @@ class Toolbox extends Component {
     render() {
         const { toolbox, onToolClick, activeTool } = this.props;
         const visibilities = this.state;
-            console.log(visibilities);
 
         return (
             <div>
@@ -32,7 +31,7 @@ class Toolbox extends Component {
                                 >
                                     {toolData[key].displayName}
                                     <span
-                                        onClick={() => (console.log('f'), this.setState({[key]: true}))}
+                                        onClick={() => (this.setState({[key]: true}))}
                                         className={'help'}
                                     >
                                         (❓)

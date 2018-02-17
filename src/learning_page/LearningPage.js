@@ -9,7 +9,6 @@ class LearningPage extends Component {
 
         return (
             <div className={'LearningPage'}>
-                Strona Lernejska
                 <div className={'main'}>
                     <div className={'text'}>
                         <DiscoverableText
