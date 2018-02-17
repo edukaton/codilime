@@ -6,10 +6,8 @@ class VariableChunk extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {popoverVisible:false};
+        this.state = { popoverVisible:false };
     }
-
-    onClickHandler;
 
     render() {
         const { id, vanillaText, toolsState, manipulatedTexts, activeTool, chunkClick } = this.props;
@@ -18,7 +16,7 @@ class VariableChunk extends Component {
         const isManipulated = !!toolsState[id];
 
         const onUndoClickHandler = () => {
-            this.setState({popoverVisible: false});
+            this.setState({ popoverVisible: false });
             return chunkClick(id, true);
         };
 
@@ -27,7 +25,7 @@ class VariableChunk extends Component {
                                 <button onClick={onUndoClickHandler}>Cofnij</button>
                             </div>;
 
-        this.onClickHandler = () => {
+        const onClickHandler = () => {
             if (isActive) {
                 return chunkClick(id, isActive);
             }
@@ -46,7 +44,7 @@ class VariableChunk extends Component {
                     (isActive ? 'active-target ' : 'inactive-target ')
                               + (!toolsState[id] ?  'vanilla-target' : 'manipulated-target')}
                       data-id={id}
-                      onClick={this.onClickHandler}
+                      onClick={onClickHandler}
                 >
                     {!toolsState[id] ? vanillaText : manipulatedTexts[toolsState[id]]}
                 </span>

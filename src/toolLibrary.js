@@ -12,8 +12,10 @@ export const metricUnApply = {
 export const toolData = {
     capslock: {
         displayName: 'WIELKIE LITERY',
+        helpText: 'WTEEDY JEST MOCNO I DOBRZE WIADOMO',
     },
     exclamation: {
         displayName: 'Wykrzykniki!!!',
+        helpText: '!!!! Bo to ważne !!! ! ! ',
     }
 }
