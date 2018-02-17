@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DiscoverableChunk from "./DiscoverableChunk";
 
 class DiscoverableText extends Component {
     render() {
@@ -8,14 +9,35 @@ class DiscoverableText extends Component {
             <div>
                 <h1>
                     tytul bardzo cichy
-                    <span onClick={()=>onToolDiscover('exclamation')}>
+                    <DiscoverableChunk
+                        toolname={'exclamation'}
+                        callback={onToolDiscover}
+                        question={{
+                            text: 'Czy to prawda?',
+                            answerA: 'Ni',
+                            answerB: 'Oj',
+                            answerC: 'Hyh',
+                            answerD: 'Uważam że żaby',
+                        }}
+                    >
                         !!!!!!!!!!!!!!!!
-                    </span>
+                    </DiscoverableChunk>
                 </h1>
                 Czy wiecie kto powyjadal
-                <span onClick={()=>onToolDiscover('capslock')}>
+
+                <DiscoverableChunk
+                    toolname={'capslock'}
+                    callback={onToolDiscover}
+                    question={{
+                        text: 'Czy to prawda?',
+                        answerA: 'Ni',
+                        answerB: 'Oj',
+                        answerC: 'Hyh',
+                        answerD: 'Uważam że żaby',
+                    }}
+                >
                     WSZYSTKIE PORZECZKI
-                </span>
+                </DiscoverableChunk>
                 ?!
 
 

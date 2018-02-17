@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 class VariableChunk extends Component {
     render() {
         const { id, vanillaText, toolsState, manipulatedTexts, activeTool, chunkClick } = this.props;
-
         const isActive = manipulatedTexts[activeTool] && !toolsState[id];
-        console.log(this.props);
+
         return (
             <span className={
                 (isActive ? 'active-target ' : 'inactive-target ')
