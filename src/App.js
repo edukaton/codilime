@@ -1,20 +1,57 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import StartPage from "./start_page/StartPage";
+import LearningPage from "./learning_page/LearningPage";
+import TaskPage from "./task_page/TaskPage";
+import ResultsPage from "./results_page/ResultsPage";
+import { STATES } from './consts';
+
+const INITIAL_STATE = {
+    currentPage: 'start',
+};
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = INITIAL_STATE;
+    }
+
   render() {
+        let MainComponent;
+
+        switch (this.state.currentPage) {
+            case STATES.START:
+                MainComponent = StartPage;
+                break;
+
+            case STATES.LEARNING:
+                MainComponent = LearningPage;
+                break;
+
+            case STATES.TASK:
+                MainComponent = TaskPage;
+                break;
+
+            case STATES.RESULTS:
+                MainComponent = ResultsPage;
+                break;
+
+            default:
+                MainComponent = StartPage;
+        }
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <MainComponent
+            transferTo={this.transferTo}
+        />
       </div>
     );
+  }
+
+  transferTo = (pageName) => {
+        this.setState({currentPage: pageName});
   }
 }
 
