@@ -11,6 +11,11 @@ const INITIAL_STATE = {
     currentPage: 'start',
     toolbox: {},
     appliedTools: {},
+    metrics: {
+        A: 20,
+        B: 20,
+        C: 20,
+    }
 };
 
 class App extends Component {

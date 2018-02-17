@@ -1,27 +1,22 @@
 import React, { Component } from 'react';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
+
+
 import {STATES} from "../consts";
 import Toolbox from "../components/Toolbox";
 import VariableText from "../components/VariableText";
-
-const INITIAL_STATE= {
-    appliedTools: {},
-};
+import { metricApply, metricUnApply} from "../toolLibrary";
 
 class TaskPage extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = INITIAL_STATE;
-    }
-
     toolClickHandler = (tool) => {
-        console.log(tool)
       this.props.setState((state) => {
           return {
               appliedTools: {
-                  [tool]: true,
-                  ...state.appliedTools
+                  ...state.appliedTools,
+                  [tool]: !state.appliedTools[tool],
               },
+              metrics: state.appliedTools[tool]? metricUnApply[tool](state.metrics) : metricApply[tool](state.metrics)
           }
       })
   };
@@ -47,7 +42,11 @@ class TaskPage extends Component {
                 </div>
             </div>
             <div className={'bottom'}>
-                Bottom
+                <div className={'sliders'}>
+                    Capslockatowosc: {mainState.metrics.A} <Slider value={mainState.metrics.A} disabled={true}/>
+                    Zielonosc: {mainState.metrics.B} <Slider value={mainState.metrics.B} disabled={true}/>
+                    Miekkosc: {mainState.metrics.C} <Slider value={mainState.metrics.C} disabled={true}/>
+                </div>
                 <button onClick={() => this.props.transferTo(STATES.LEARNING)}>
                     wiecej info
                 </button>

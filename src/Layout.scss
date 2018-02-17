@@ -1,16 +1,29 @@
+html, body, #root, .App {
+  height: 100%;
+}
+
 .LearningPage, .TaskPage {
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   .main {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
   }
 
   .text {
     flex-grow: 3;
+    padding: 40px;
   }
 
   .side {
     flex-grow: 1;
+    padding: 40px;
+  }
+
+  .bottom {
+    padding: 40px;
   }
 }
