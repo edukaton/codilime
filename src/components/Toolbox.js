@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { toPairs } from 'lodash';
 import classnames from 'classnames';
 import {toolData} from '../toolLibrary';
+import Popover from "react-popover";
 
 class Toolbox extends Component {
   render() {
