@@ -25,7 +25,7 @@ class TaskPage extends Component {
   textClickHandler = (id, active) => {
       if (active) {
           this.props.setState((state) => {
-              const tool = state.activeTool;
+              const tool = state.activeTool || state.appliedTools[id];
 
               return {
                   activeTool: false,
@@ -55,7 +55,6 @@ class TaskPage extends Component {
                     />
                 </div>
                 <div className={'side'}>
-                    sidebar
                     <Toolbox
                         toolbox={mainState.toolbox}
                         activeTool={mainState.activeTool}

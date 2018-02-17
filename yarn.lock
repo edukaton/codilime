@@ -5509,9 +5509,9 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
-react-popover@^0.5.4:
+"react-popover@git://github.com/xxx/react-popover.git#da97510cbda526b5cc0985e47f17791cef782411":
   version "0.5.4"
-  resolved "https://registry.yarnpkg.com/react-popover/-/react-popover-0.5.4.tgz#ce8de58bcd0dc8731b665e7aeebcbf7ebd74ea24"
+  resolved "git://github.com/xxx/react-popover.git#da97510cbda526b5cc0985e47f17791cef782411"
   dependencies:
     css-vendor "^0.3.1"
     debug "^2.6.8"
