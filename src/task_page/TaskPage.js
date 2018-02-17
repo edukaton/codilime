@@ -45,6 +45,14 @@ class TaskPage extends Component {
 
       return (
         <div className={'TaskPage'}>
+            <div className={'head'}>
+                <div onClick={() => this.props.transferTo(STATES.LEARNING)}>
+                    <span>{'(<)'}</span>Do rozgrzewki
+                </div>
+                <div className={'title'}>
+                    INFOTOSTER.tostowanie
+                </div>
+            </div>
             <div className={'main'}>
                 <div className={'text'}>
                     <VariableText
@@ -68,12 +76,11 @@ class TaskPage extends Component {
                     Manipulacja: {mainState.metrics.C} <Slider value={mainState.metrics.C} disabled={true}/>
                     Zaufanie: {mainState.metrics.D} <Slider value={mainState.metrics.D} disabled={true}/>
                 </div>
-                <button onClick={() => this.props.transferTo(STATES.LEARNING)}>
-                    wiecej info
-                </button>
-                <button onClick={() => this.props.transferTo(STATES.RESULTS)}>
-                    sprawdz mi
-                </button>
+                <div className={'buttons'}>
+                    <button onClick={() => this.props.transferTo(STATES.RESULTS)}>
+                        TOSTUJ
+                    </button>
+                </div>
             </div>
         </div>
     );

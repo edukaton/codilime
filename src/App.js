@@ -8,7 +8,7 @@ import ResultsPage from "./results_page/ResultsPage";
 import {STATES} from './consts';
 
 const INITIAL_STATE = {
-    currentPage: 'start',
+    currentPage: STATES.LEARNING,//.START,
     toolbox: {},
     appliedTools: {},
     metrics: {

@@ -9,6 +9,12 @@ class LearningPage extends Component {
 
         return (
             <div className={'LearningPage'}>
+                <div className={'head'}>
+                    <div><span>{'(<)'}</span>Na poczatek</div>
+                    <div className={'title'}>
+                        INFOTOSTER.rozgrzewka
+                    </div>
+                </div>
                 <div className={'main'}>
                     <div className={'text'}>
                         <DiscoverableText

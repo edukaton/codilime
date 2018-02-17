@@ -13,6 +13,21 @@ html, body, #root, .App {
     flex-grow: 1;
   }
 
+  .head {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    .title {
+      flex-grow: 1;
+    }
+    div {
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
   .text {
     flex-grow: 3;
     padding: 40px;
@@ -20,12 +35,26 @@ html, body, #root, .App {
   }
 
   .side {
-    flex-grow: 1;
+    flex-grow: 0;
+    min-width: 200px;
     padding: 40px;
   }
 
   .bottom {
-    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    .sliders {
+      flex-grow: 3;
+      padding: 40px;
+    }
+    .buttons {
+      align-items: center;
+      justify-items: center;
+      display: flex;
+      padding: 40px;
+      flex-grow: 0;
+      min-width: 200px;
+    }
   }
 }
 
