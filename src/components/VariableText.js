@@ -53,12 +53,6 @@ class VariableText extends Component {
                     />
 
                 </h1>
-
-                <div>
-                    Autor: …<br/>
-                    Data: …
-                </div>
-
                 <div>
                     <strong>
                         W 1992 roku naukowcy ostrzegli ludzi przed <VariableChunk
@@ -148,21 +142,21 @@ class VariableText extends Component {
                         />
                         ocieplania się klimatu
                         <VariableChunk
-                        id={'13'}
-                        vanillaText={' i wyjałowienia gleby. '}
-                        manipulatedTexts={{
-                            honest: '. '
-                        }}
-                        {...chunkDefaults}
+                            id={'13'}
+                            vanillaText={' i wyjałowienia gleby. '}
+                            manipulatedTexts={{
+                                honest: '. '
+                            }}
+                            {...chunkDefaults}
                         />
                         Będzie miało to
                         <VariableChunk
-                        id={'14'}
-                        vanillaText={' wpływ '}
-                        manipulatedTexts={{
-                            emotionalLoad: ' dramatyczny wpływ '
-                        }}
-                        {...chunkDefaults}/>
+                            id={'14'}
+                            vanillaText={' wpływ '}
+                            manipulatedTexts={{
+                                emotionalLoad: ' dramatyczny wpływ '
+                            }}
+                            {...chunkDefaults}/>
                         na ceny żywności, zwłaszcza produktów zbożowych. Ziemię mamy jedną, więc należy ją chronić.
                         Wiele możemy zmienić sami! Oszczędzajmy wodę, prąd i produkujmy mniej śmieci.
                     </p>
