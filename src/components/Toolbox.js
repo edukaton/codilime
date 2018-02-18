@@ -18,7 +18,9 @@ class Toolbox extends Component {
 
         return (
             <div>
-                NARZĘDZIA ({toolboxItems.length})
+                <div className={'toolbox-head'}>
+                    NARZĘDZIA <div className={'toolbox-circle'}>{toolboxItems.length}</div>
+                </div>
                 {toolboxItems.map(([key, value]) => {
                     return <Popover
                                 key={key}

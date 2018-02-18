@@ -144,6 +144,21 @@ html, body, #root, .App {
 .Popover-tipShape {
   fill: hsl(0, 0%, 27%)
 }
+.toolbox-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border: 3px solid #FFF;
+  border-radius: 50px;
+  text-align: center;
+}
 
 .tool {
   border: #4285f4;
