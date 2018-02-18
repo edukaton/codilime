@@ -10,7 +10,7 @@ import {STATES} from './consts';
 import 'typeface-source-sans-pro';
 
 const INITIAL_STATE = {
-    currentPage: STATES.TASK,//STATES.LEARNING,
+    currentPage: STATES.START,
     modalBody: <div/>,
     toolbox: {},
     appliedTools: {},
