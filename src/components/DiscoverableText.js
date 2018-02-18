@@ -28,7 +28,7 @@ class DiscoverableText extends Component {
                     </DiscoverableChunk>
                 </h1>
                 <DiscoverableChunk
-                    toolname={'rescaledImage'}
+                    toolname={'sensationalImage'}
                     callback={onToolDiscover}
                     question={QUESTIONS[3]}>
                     <div><img src={operacja}/></div>
@@ -42,7 +42,10 @@ class DiscoverableText extends Component {
                     4 przypadki zachorowań na
                     <DiscoverableChunk
                         toolname={'addedLinks'}
-                        callback={onToolDiscover}
+                        callback={() => {
+                            onToolDiscover('addedLinks');
+                            onToolDiscover('fakeSource')
+                        }}
                         question={QUESTIONS[5]}> <u>grypę żołądkową</u>. </DiscoverableChunk>
                     Na razie nie ma jeszcze informacji na temat nadchodzącej epidemii i czy konieczna
                     będzie hospitalizacja wszystkich dzieci, ale&nbsp;
@@ -62,7 +65,7 @@ class DiscoverableText extends Component {
                         NAJNOWSZE DONIESIENIA!!! </DiscoverableChunk>
                     Globalne ocieplenie podważone???</h1>
                 <DiscoverableChunk
-                    toolname={'modifiedImage'}
+                    toolname={'sensationalImage'}
                     callback={onToolDiscover}
                     question={QUESTIONS[8]}>
                     <div><img src={globalWarming}/></div>
@@ -75,18 +78,18 @@ class DiscoverableText extends Component {
                         Dr John Irons uważa, że </DiscoverableChunk>
                     nie ma stuprocentowej pewności, że globalne ocieplenie ma miejsce.&nbsp;
                     <DiscoverableChunk
-                        toolname={'capslock'}
+                        toolname={'cherryPicking'}
                         callback={onToolDiscover}
                         question={QUESTIONS[10]}>
                         Ostatnia fala ochłodzenia w południowej Anglii nie wydaje się tego
                         potwierdzać.</DiscoverableChunk>
                 </div>
                 <DiscoverableChunk
-                    toolname={'capslock'}
+                    toolname={'share'}
                     callback={onToolDiscover}
                     question={QUESTIONS[11]}>
                     <div>
-                        Zszeruj na F
+                        Share
                     </div>
                 </DiscoverableChunk>
             </div>

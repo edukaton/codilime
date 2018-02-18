@@ -71,17 +71,20 @@ export const QUESTIONS = {
         '"aż" sugeruje, że to dużo. ' +
         'Czy dany tekst informuje o tym, czy 4 to dużo czy nie?',
         answers: [
-            'a) tak',
-            'b) nie',
-            'c) nie mam pojęcia'
+            'tak',
+            'nie',
+            'nie mam pojęcia'
         ],
         correctAnswer: 0,
     },
     5: {
         text: 'Link do źródeł lub dalszych informacji. ' +
-        'Taki link może uwiarygodnić materiał, ale musisz upewnić się, że źródło jest faktycznie wiarygodne. ' +
-        'Link może prowadzić do strony, która nie jest rzetelna.',
-        answers: [],
+        'Taki link może uwiarygodnić materiał, ale czy wszystkie linki są wiarygodne?',
+        answers: [
+            'tak, linki w artykule są zawsze wiarygodne',
+            'nie, zdarzają się linki do mało rzetelnych źródeł',
+            'w zasadzie, to nie wiem...'
+        ],
         correctAnswer: 0,
     },
     6: {
@@ -89,9 +92,9 @@ export const QUESTIONS = {
         'ale informacja o rodzicach sugeruje zagrożenie i niepewność. ' +
         'Które sformułowanie jest wg Ciebie najbardziej emocjonalne?',
         answers: [
-            'a) rodzice czekają',
-            'b) przestraszeni rodzice',
-            'c) czekają na rozwój wypadków'
+            'rodzice czekają',
+            'przestraszeni rodzice',
+            'czekają na rozwój wypadków'
         ],
         correctAnswer: 1,
     },
@@ -100,9 +103,9 @@ export const QUESTIONS = {
         'Użycie takich haseł jest częstym zabiegiem mającym na celu zwrócenie uwagi. ' +
         'Które wyrażenie jest wg Ciebie najbardziej sensacyjne?',
         answers: [
-            'a) Nie do wiary.',
-            'b) Czy możemy w to wierzyć?',
-            'c) Nie do wiary!!! Zobaczcie co się stało!'
+            'Nie do wiary.',
+            'Czy możemy w to wierzyć?',
+            'Nie do wiary!!! Zobaczcie co się stało!'
         ],
         correctAnswer: 2,
     },
@@ -111,29 +114,39 @@ export const QUESTIONS = {
         'Czy zdjęcie rzetelnie przedstawia historię czy tylko sugeruje coś, co niekoniecznie ma miejsce? ' +
         'Wybierz prawdziwe stwierdzenie:',
         answers: [
-            'a) to zdjęcie jest wykonane w południowej Anglii',
-            'b) to zdjęcie przedstawia zimowy pejzaż',
-            'c) to zdjęcie dowodzi, że ocieplenia nie ma - jest za to mroźna zima!'
+            'to zdjęcie jest wykonane w południowej Anglii',
+            'to zdjęcie przedstawia zimowy pejzaż',
+            'to zdjęcie dowodzi, że ocieplenia nie ma - jest za to mroźna zima!'
         ],
         correctAnswer: 1,
     },
     9: {
         text: 'Opinia a fakt. Zauważ, że mamy tu do czynienia z opinią, a nie faktem, ' +
         'i nie wiemy jaką wiedzę ma dr Irons. Tytuł sugeruje jednak coś, co jest pewne i jest doniesieniem. ' +
-        'Często możemy mieć do czynienia z przyjmowaniem opinii jako faktów.',
-        answers: [],
-        correctAnswer: 0,
+        'Często możemy mieć do czynienia z przyjmowaniem opinii jako faktów. Jak sądzisz:',
+        answers: [
+            'można dowolnie zmienić opinię na fakt',
+            'można dowolnie zmieniać fakt na opinię',
+            'nie można dowolnie zamieniać opinii na fakt i odwrotnie'
+        ],
+        correctAnswer: 2,
     },
     10: {
         text: 'Wybiórczość w doborze faktów. ' +
         'Czy to, co się dzieje w Anglii, automatycznie dowodzi czegoś, ' +
         'co ma charakter ogólnoświatowy?',
-        answers: [],
-        correctAnswer: 0,
+        answers: [
+            'tak, mogę na podstawie wydarzeń w południowej Anglii powiedzieć, co dzieje się ogólnie',
+            'mogę dowolnie uogólniać wydarzenia z Warszawy i mówić jak jest wszędzie',
+            'nie można na podstawie dobranego szczegółu formułować wniosków ogólnych'
+        ],
+        correctAnswer: 2,
     },
     11: {
-        text: 'Smash that mf LIKE button!',
-        answers: [],
+        text: 'Smash that LIKE button!',
+        answers: [
+            '👍'
+        ],
         correctAnswer: 0,
     },
 };
