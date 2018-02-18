@@ -2,7 +2,9 @@
   "name": "codilime-edukaton",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://edukaton.github.io/codilime/",
   "dependencies": {
+    "gh-pages": "^1.1.0",
     "lodash": "^4.17.5",
     "node-sass-chokidar": "^0.0.3",
     "rc-slider": "^8.6.0",
@@ -14,6 +16,8 @@
     "typeface-source-sans-pro": "^0.0.54"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
