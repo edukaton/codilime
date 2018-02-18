@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import Modal from 'react-modal';
 
 import {STATES} from "../consts";
 import Toolbox from "../components/Toolbox";
@@ -90,6 +91,16 @@ class TaskPage extends Component {
                         </button>
                     </div>
                 </div>
+
+                <Modal
+                    isOpen={!mainState.modalsHidden[STATES.TASK]}
+                >
+                    <h1 id="heading">{mainState.username}, wchodzisz do trybu tostowania</h1>
+                    <div id="full_description">
+                        <p>Description goes here.</p>
+                        <button onClick={() => this.props.setState((prevState) => ({modalsHidden:{[STATES.TASK]:true, ...prevState.modalHidden}}))}>Jasne</button>
+                    </div>
+                </Modal>
             </div>
         );
     }

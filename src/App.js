@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Modal from 'react-modal';
 import './App.css';
 import './Layout.css';
 import StartPage from "./start_page/StartPage";
@@ -8,9 +9,10 @@ import ResultsPage from "./results_page/ResultsPage";
 import {STATES} from './consts';
 
 const INITIAL_STATE = {
-    currentPage: STATES.LEARNING,//.START,
+    currentPage: STATES.TASK,//STATES.START,
     toolbox: {},
     appliedTools: {},
+    modalsHidden: {},
     metrics: {
         A: 20,
         B: 20,

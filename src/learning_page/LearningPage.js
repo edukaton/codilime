@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
 import {STATES} from "../consts";
+import Modal from 'react-modal';
 import Toolbox from "../components/Toolbox";
 import DiscoverableText from "../components/DiscoverableText";
 
 class LearningPage extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {}
+    }
+
     render() {
         const {mainState, setState} = this.props;
 
@@ -37,6 +44,15 @@ class LearningPage extends Component {
                         </button>
                     </div>
                 </div>
+                <Modal
+                    isOpen={!mainState.modalsHidden[STATES.LEARNING]}
+                >
+                    <h1 id="heading">{mainState.username}, własnie wchodzisz do trybu rozgrzewki</h1>
+                    <div id="full_description">
+                        <p>Description goes here.</p>
+                        <button onClick={() => this.props.setState((prevState) => ({modalsHidden:{[STATES.LEARNING]:true, ...prevState.modalsHidden}}))}>Jasne</button>
+                    </div>
+                </Modal>
             </div>
         );
     }

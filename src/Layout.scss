@@ -72,6 +72,10 @@ html, body, #root, .App {
   justify-items: center;
 
   height: 100%;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .active-target {
