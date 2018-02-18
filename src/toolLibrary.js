@@ -30,12 +30,12 @@ export const metricUnApply = {
 
 export const toolData = {
     capslock: {
-        displayName: 'Caps Lock',
-        helpText: 'WTEEDY JEST MOCNO I DOBRZE WIADOMO',
+        displayName: 'Wielkie litery',
+        helpText: 'helptext wielkich liter',
     },
     exclamation: {
-        displayName: 'Wykrzykniki / dodatkowe znaki zapytania w tytule',
-        helpText: '!!!! Bo to ważne !!! ! ! ',
+        displayName: 'Dodaj wykrzyknik/znak zapytania',
+        helpText: 'helptext wykrzykników',
     },
     sensationalImage: {
         displayName: 'Modyfikacja obrazka',
@@ -46,15 +46,15 @@ export const toolData = {
         helpText: 'helptext zmodyfikowanego zdjęcia',
     },
     opinionVsFact: {
-        displayName: 'Opinia vs fakt',
+        displayName: 'Opinia a fakt',
         helpText: 'helptext opinii vs faktu',
     },
     sensationalText: {
-        displayName: 'Sensacyjne hasło',
+        displayName: 'Dodaj snsacyjne hasło',
         helpText: 'helptext sensacyjnego hasła',
     },
     emotionalLoad: {
-        displayName: 'Nacechuj emocjonalnie',
+        displayName: 'Nacechowanie emocjonalne',
         helpText: 'helptext nacechowania emocjonalnego',
     },
     addedLinks: {
@@ -75,11 +75,11 @@ export const toolData = {
     },
     cherryPicking: {
         displayName: 'Wybiórczość w doborze faktów',
-        helpText: 'Wybiórczość helptext'
+        helpText: 'Wybiórczość helptext',
     },
     share: {
-        displayName: 'Udostępnianie w mediach społecznościowych',
-        helpText: 'Share helptext'
+        displayName: 'Udostępnij w mediach społecznościowych',
+        helpText: 'Share helptext',
     },
 
 };

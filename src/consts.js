@@ -143,10 +143,12 @@ export const QUESTIONS = {
         correctAnswer: 2,
     },
     11: {
-        text: 'Smash that LIKE button!',
+        text: 'Jak podzielenie się postem w mediach społecznościowych wpływa na jego odbiór?',
         answers: [
-            '👍'
+            'ma niewielki wpływ',
+            'może mieć bardzo duży wpływ na liczbę osób, które go przeczyta',
+            'nie wiem'
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
     },
 };
