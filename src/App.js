@@ -15,10 +15,10 @@ const INITIAL_STATE = {
     appliedTools: {},
     modalsHidden: {},
     metrics: {
-        A: 20,
-        B: 20,
-        C: 20,
-        D: 50,
+        A: 40,
+        B: 70,
+        C: 40,
+        D: 70,
     }
 };
 
