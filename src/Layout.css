@@ -3,13 +3,14 @@ html, body, #root, .App {
   background: linear-gradient(180deg, #0B0936 0%, #0F0928 100%);
   color: #FFFFFF;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 500;
   text-shadow: 0 2px 4px 0 rgba(80, 227, 194, 0.36); }
 
 .siema {
   color: #24DDB4;
   letter-spacing: 3px;
+  font-size: 32px;
   line-height: 40px;
   cursor: pointer; }
 
@@ -18,7 +19,7 @@ html, body, #root, .App {
 
 .title-like {
   color: #24DDB4;
-  text-align: center; }
+  font-size: 24px; }
 
 .LearningPage, .TaskPage {
   height: 100%;
@@ -164,7 +165,7 @@ button {
   width: 161px;
   border: 2px solid #15B193;
   border-radius: 10px;
-  box-shadow: 0 4px 13px 0 #50E3C2;
+  box-shadow: 0 1px 10px 0 #50E3C2;
   background-color: transparent;
   color: #ffff;
   font-size: 24px;
@@ -172,3 +173,53 @@ button {
   button.rozgrzej-button {
     height: 70px;
     width: 288px; }
+
+.rc-slider-rail {
+  position: absolute;
+  width: 100%;
+  background-color: #e9e9e9;
+  height: 20px;
+  border-radius: 6px;
+  visibility: hidden; }
+
+.rc-slider-disabled .rc-slider-track {
+  height: 20px;
+  background-color: #ccc; }
+
+.rc-slider-disabled .rc-slider-handle, .rc-slider-disabled .rc-slider-dot {
+  visibility: hidden; }
+
+.rc-slider.rc-slider-disabled {
+  visibility: hidden; }
+
+.sliders .metric-A .rc-slider-track {
+  height: 20px;
+  width: 113.9px;
+  border: 1px solid #4AA8E2;
+  border-radius: 23px;
+  background-color: #73CDFF;
+  box-shadow: 0 1px 11px 0 #73CDFF; }
+
+.sliders .metric-B .rc-slider-track {
+  height: 20px;
+  width: 113.9px;
+  border: 1px solid #F46035;
+  border-radius: 23px;
+  background: linear-gradient(180deg, #FF9662 0%, #FF7B54 100%);
+  box-shadow: 0 1px 12px 0 rgba(247, 138, 106, 0.81); }
+
+.sliders .metric-D .rc-slider-track {
+  height: 20px;
+  width: 113.9px;
+  border: 1px solid #F15881;
+  border-radius: 23px;
+  background-color: #F1698E;
+  box-shadow: 0 1px 9px 0 #FF5D8E; }
+
+.sliders .metric-C .rc-slider-track {
+  height: 20px;
+  width: 113.9px;
+  border: 1px solid #9A36F1;
+  border-radius: 23px;
+  background: linear-gradient(180deg, #C755FF 0%, #A946FF 100%);
+  box-shadow: 0 1px 9px 0 rgba(169, 70, 255, 0.86); }

@@ -81,16 +81,16 @@ class TaskPage extends Component {
                 </div>
                 <div className={'bottom'}>
                     <div className={'sliders'}>
-                        <div>
+                        <div className={'metric-A'}>
                             Klikalność: {mainState.metrics.A} <Slider value={mainState.metrics.A} disabled={true}/>
                         </div>
-                        <div>
+                        <div className={'metric-B'}>
                             Prawdziwość: {mainState.metrics.B} <Slider value={mainState.metrics.B} disabled={true}/>
                         </div>
-                        <div>
+                        <div className={'metric-C'}>
                             Manipulacja: {mainState.metrics.C} <Slider value={mainState.metrics.C} disabled={true}/>
                         </div>
-                        <div>
+                        <div className={'metric-D'}>
                             Zaufanie: {mainState.metrics.D} <Slider value={mainState.metrics.D} disabled={true}/>
                         </div>
                     </div>

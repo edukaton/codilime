@@ -46,7 +46,9 @@ class StartPage extends Component {
         else if (greeted) {
             mainContent =
                 <div>
-                    <span className={'title-like'}><Logo/> JAK SIE NAZYWASZ?</span>
+                    <span className={'title-like'}>
+                        <Logo/> JAK SIE NAZYWASZ?
+                    </span>
                     <div className={'name-form'}>
                         <input type="text" onChange={this.handleChange}/>
                         <button onClick={() => setState({username: value})}>JEDZIEMY</button>
