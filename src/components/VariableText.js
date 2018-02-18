@@ -76,13 +76,13 @@ class VariableText extends Component {
                     <p>
                         <VariableChunk
                             id={'6'}
-                            vanillaText={'Pierwszy raport o stanie '}
+                            vanillaText={'Pierwszy raport o stanie'}
                             manipulatedTexts={{
-                                addedLinks: <a href="https://www.ucsusa.org/about/1992-world-scientists.html">Pierwszy
-                                    raport o stanie </a>
+                                addedLinks: <span className="hyperlink">Pierwszy
+                                    raport o stanie</span>
                             }}
                             {...chunkDefaults}/>
-                        środowiska wraz z listą proponowanych zmian został podpisany przez
+                        &nbsp;środowiska wraz z listą proponowanych zmian został podpisany przez
                         <VariableChunk
                             id={'7'}
                             vanillaText={' około '}
@@ -98,13 +98,13 @@ class VariableText extends Component {
                     <p>
                         <VariableChunk
                             id={'8'}
-                            vanillaText={'Drugi raport '}
+                            vanillaText={'Drugi raport'}
                             manipulatedTexts={{
-                                fakeSource: <a href="http://fakenews.com">Drugi raport </a>
+                                fakeSource: <span className="hyperlink">Drugi raport</span>
                             }}
                             {...chunkDefaults}
                         />
-                        podpisało
+                        &nbsp;podpisało
                         <VariableChunk
                             id={'9'}
                             vanillaText={' 15 364 '}
@@ -129,7 +129,41 @@ class VariableText extends Component {
                             }}
                             {...chunkDefaults}/>
                         , że powinniśmy zmienić nasz styl życia.
-                        Ziemię mamy jedną, więc należy ją chronić.
+                        <VariableChunk
+                            id={'11'}
+                            vanillaText={' Amerykańscy naukowcy dowodzą'}
+                            manipulatedTexts={{
+                                addedLinks: <span className="hyperlink"> Amerykańscy naukowcy dowodzą</span>
+                            }}
+                            {...chunkDefaults}
+                        />
+                        , że to
+                        <VariableChunk
+                            id={'12'}
+                            vanillaText={' człowiek jest powodem '}
+                            manipulatedTexts={{
+                                honest: ' człowiek jest jednym z powodów '
+                            }}
+                            {...chunkDefaults}
+                        />
+                        ocieplania się klimatu
+                        <VariableChunk
+                        id={'13'}
+                        vanillaText={' i wyjałowienia gleby. '}
+                        manipulatedTexts={{
+                            honest: '. '
+                        }}
+                        {...chunkDefaults}
+                        />
+                        Będzie miało to
+                        <VariableChunk
+                        id={'14'}
+                        vanillaText={' wpływ '}
+                        manipulatedTexts={{
+                            emotionalLoad: ' dramatyczny wpływ '
+                        }}
+                        {...chunkDefaults}/>
+                        na ceny żywności, zwłaszcza produktów zbożowych. Ziemię mamy jedną, więc należy ją chronić.
                         Wiele możemy zmienić sami! Oszczędzajmy wodę, prąd i produkujmy mniej śmieci.
                     </p>
                 </div>
