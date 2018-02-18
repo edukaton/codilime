@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {modalStyle, STATES} from "../consts";
+import { toPairs } from 'lodash';
 import Popover from 'react-popover';
 import Logo from "../components/logo";
 import Toolbox from "../components/Toolbox";
@@ -50,9 +51,9 @@ class LearningPage extends Component {
                 <div className={'bottom'}>
                     <div className={'sliders'}/>
                     <div className={'buttons'}>
-                        <button onClick={() => this.props.transferTo(STATES.TASK)}>
-                            juz umiem
-                        </button>
+                        {toPairs(mainState.toolbox).length >= 3 && <button onClick={() => this.props.transferTo(STATES.TASK)}>
+                            TOSTUJ >
+                        </button>}
                     </div>
                 </div>
             </div>

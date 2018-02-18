@@ -49,9 +49,9 @@ class TaskPage extends Component {
         return (
             <div className={'TaskPage'}>
                 <div className={'head'}>
-                    <div onClick={() => this.props.transferTo(STATES.LEARNING)}>
-                        <span>{'(<)'}</span>Do rozgrzewki
-                    </div>
+
+                    <div className={'navText'} onClick={() => this.props.transferTo(STATES.LEARNING)}>
+                        <div className={'circle'}>{'<'}</div>DO ROZGRZEWKI</div>
                     <div className={'title'}>
 
                         <Popover

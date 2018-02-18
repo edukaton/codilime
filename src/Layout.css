@@ -124,7 +124,8 @@ html, body, #root, .App {
   justify-content: space-around; }
 
 .navText {
-  font-size: 16px; }
+  font-size: 16px;
+  cursor: pointer; }
 
 .circle {
   width: 40px;
