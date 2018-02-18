@@ -7,9 +7,10 @@ import LearningPage from "./learning_page/LearningPage";
 import TaskPage from "./task_page/TaskPage";
 import ResultsPage from "./results_page/ResultsPage";
 import {STATES} from './consts';
+import 'typeface-source-sans-pro';
 
 const INITIAL_STATE = {
-    currentPage: STATES.TASK,//STATES.START,
+    currentPage: STATES.LEARNING,
     toolbox: {},
     appliedTools: {},
     modalsHidden: {},

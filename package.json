@@ -10,7 +10,8 @@
     "react-dom": "^16.2.0",
     "react-modal": "^3.2.1",
     "react-popover": "git://github.com/xxx/react-popover.git#da97510cbda526b5cc0985e47f17791cef782411",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "typeface-source-sans-pro": "^0.0.54"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",

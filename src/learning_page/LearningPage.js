@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {STATES} from "../consts";
+import {modalStyle, STATES} from "../consts";
 import Modal from 'react-modal';
 import Toolbox from "../components/Toolbox";
 import DiscoverableText from "../components/DiscoverableText";
@@ -17,9 +17,9 @@ class LearningPage extends Component {
         return (
             <div className={'LearningPage'}>
                 <div className={'head'}>
-                    <div><span>{'(<)'}</span>Na poczatek</div>
+                    <div onClick={() => this.props.transferTo(STATES.START)}><span>{'(<)'}</span>Na poczatek</div>
                     <div className={'title'}>
-                        INFOTOSTER.rozgrzewka
+                        🍞 INFOTOSTER.rozgrzewka
                     </div>
                 </div>
                 <div className={'main'}>
@@ -46,6 +46,7 @@ class LearningPage extends Component {
                 </div>
                 <Modal
                     isOpen={!mainState.modalsHidden[STATES.LEARNING]}
+                    style={modalStyle}
                 >
                     <h1 id="heading">{mainState.username}, własnie wchodzisz do trybu rozgrzewki</h1>
                     <div id="full_description">

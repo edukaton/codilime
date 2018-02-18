@@ -14,11 +14,12 @@ class Toolbox extends Component {
     render() {
         const { toolbox, onToolClick, activeTool } = this.props;
         const visibilities = this.state;
+        const toolboxItems = toPairs(toolbox);
 
         return (
             <div>
-                Narzędziownik
-                {toPairs(toolbox).map(([key, value]) => {
+                NARZĘDZIA ({toolboxItems.length})
+                {toolboxItems.map(([key, value]) => {
                     return <Popover
                                 key={key}
                                 isOpen={visibilities[key]}

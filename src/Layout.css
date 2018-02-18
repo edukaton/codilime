@@ -1,5 +1,23 @@
 html, body, #root, .App {
-  height: 100%; }
+  height: 100%;
+  background: linear-gradient(180deg, #0B0936 0%, #0F0928 100%);
+  color: #FFFFFF;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px 0 rgba(80, 227, 194, 0.36); }
+
+.siema {
+  color: #24DDB4;
+  letter-spacing: 3px;
+  line-height: 40px; }
+
+.name-form {
+  flex-direction: row; }
+
+.title-like {
+  color: #24DDB4;
+  text-align: center; }
 
 .LearningPage, .TaskPage {
   height: 100%;
@@ -10,7 +28,7 @@ html, body, #root, .App {
     flex-direction: row;
     flex-grow: 1; }
   .LearningPage .head, .TaskPage .head {
-    height: 50px;
+    height: 150px;
     display: flex;
     flex-direction: row; }
     .LearningPage .head .title, .TaskPage .head .title {
@@ -23,9 +41,10 @@ html, body, #root, .App {
   .LearningPage .text, .TaskPage .text {
     flex-grow: 3;
     padding: 40px;
-    overflow-y: auto; }
+    overflow-y: auto;
+    width: 350px; }
   .LearningPage .side, .TaskPage .side {
-    flex-grow: 0;
+    flex-grow: 1;
     min-width: 200px;
     padding: 40px; }
   .LearningPage .bottom, .TaskPage .bottom {
@@ -33,7 +52,12 @@ html, body, #root, .App {
     flex-direction: row; }
     .LearningPage .bottom .sliders, .TaskPage .bottom .sliders {
       flex-grow: 3;
-      padding: 40px; }
+      padding: 40px;
+      display: flex;
+      flex-direction: row; }
+      .LearningPage .bottom .sliders > div, .TaskPage .bottom .sliders > div {
+        flex-grow: 1;
+        padding: 10px; }
     .LearningPage .bottom .buttons, .TaskPage .bottom .buttons {
       align-items: center;
       justify-items: center;
@@ -41,6 +65,17 @@ html, body, #root, .App {
       padding: 40px;
       flex-grow: 0;
       min-width: 200px; }
+
+.ResultsPage, .StartPage {
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+  justify-items: center;
+  height: 100%; }
+  .ResultsPage > div, .StartPage > div {
+    display: flex;
+    flex-direction: column; }
 
 .active-target {
   animation-name: color;
@@ -77,4 +112,32 @@ html, body, #root, .App {
 
 .tool {
   border: #4285f4;
-  padding: 10px; }
+  padding: 10px;
+  margin: 10px;
+  width: 397px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.23);
+  display: flex;
+  flex-direction: row;
+  font-size: 20px; }
+
+input {
+  width: 503px;
+  height: 50px;
+  border: 2px solid #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0 4px 13px 0 #FFFFFF;
+  background-color: rgba(0, 0, 110, 0);
+  color: #ffff;
+  font-size: 24px; }
+
+button {
+  height: 50px;
+  width: 161px;
+  border: 2px solid #15B193;
+  border-radius: 10px;
+  box-shadow: 0 4px 13px 0 #50E3C2;
+  background-color: transparent;
+  color: #ffff;
+  font-size: 24px; }

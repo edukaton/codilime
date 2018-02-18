@@ -12,21 +12,26 @@ export const modalStyle = {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(255, 255, 255, 0.75)'
+        backgroundColor: 'rgba(4,3,20,0.47)',
     },
     content: {
         position: 'absolute',
-        top: '40px',
-        left: '40px',
-        right: '40px',
-        bottom: '40px',
+        margin: 'auto',
+        top: '0',
+        left: '0',
+        right: '0',
+        bottom: '0',
         border: '1px solid #ccc',
-        background: '#fff',
         overflow: 'auto',
         WebkitOverflowScrolling: 'touch',
-        borderRadius: '4px',
         outline: 'none',
-        padding: '20px'
+        padding: '20px',
+
+        height: '563px',
+        width: '1029px',
+        borderRadius: '6px',
+        background: '#0E082A',
+        boxShadow: '0 2px 20px 9px rgba(0,0,0,0.22)',
     }
 };
 

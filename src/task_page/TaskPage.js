@@ -3,7 +3,7 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import Modal from 'react-modal';
 
-import {STATES} from "../consts";
+import {modalStyle, STATES} from "../consts";
 import Toolbox from "../components/Toolbox";
 import VariableText from "../components/VariableText";
 import {metricApply, metricUnApply} from "../toolLibrary";
@@ -94,6 +94,7 @@ class TaskPage extends Component {
 
                 <Modal
                     isOpen={!mainState.modalsHidden[STATES.TASK]}
+                    style={modalStyle}
                 >
                     <h1 id="heading">{mainState.username}, wchodzisz do trybu tostowania</h1>
                     <div id="full_description">
