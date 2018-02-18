@@ -10,7 +10,7 @@ export const metricApply = {
     misleading: ({A, B, C, D}) =>           ({A: A -  0, B: B - 10, C: C + 10, D: D - 10}),
     opinionVsFact: ({A, B, C, D}) =>        ({A: A -  0, B: B - 10, C: C + 10, D: D - 10}),
     share: ({A, B, C, D}) =>                ({A: A + 10, B: B +  0, C: C +  0, D: D +  0}),
-    honest: ({A, B, C, D}) =>               ({A: A -  0, B: B + 10, C: C - 15, D: D + 10}),
+    honest: ({A, B, C, D}) =>               ({A: A -  0, B: B +  5, C: C - 15, D: D + 10}),
 };
 
 export const metricUnApply = {
@@ -25,7 +25,7 @@ export const metricUnApply = {
     misleading: ({A, B, C, D}) =>           ({A: A +  0, B: B + 10, C: C - 10, D: D + 10}),
     opinionVsFact: ({A, B, C, D}) =>        ({A: A +  0, B: B + 10, C: C - 10, D: D + 10}),
     share: ({A, B, C, D}) =>                ({A: A - 10, B: B +  0, C: C -  0, D: D +  0}),
-    honest: ({A, B, C, D}) =>               ({A: A +  0, B: B - 10, C: C + 15, D: D - 10}),
+    honest: ({A, B, C, D}) =>               ({A: A +  0, B: B -  5, C: C + 15, D: D - 10}),
 };
 
 
