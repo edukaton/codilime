@@ -150,6 +150,11 @@ html, body, #root, .App {
   flex-direction: row;
   font-size: 20px; }
 
+.hyperlink {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline; }
+
 input {
   width: 503px;
   height: 50px;
