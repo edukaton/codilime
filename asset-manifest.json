@@ -1,12 +1,13 @@
 {
-  "main.css": "static/css/main.f1792e8c.css",
-  "main.css.map": "static/css/main.f1792e8c.css.map",
-  "main.js": "static/js/main.0f4f2c9c.js",
-  "main.js.map": "static/js/main.0f4f2c9c.js.map",
+  "main.css": "static/css/main.8238d7b8.css",
+  "main.css.map": "static/css/main.8238d7b8.css.map",
+  "main.js": "static/js/main.a6e4f635.js",
+  "main.js.map": "static/js/main.a6e4f635.js.map",
   "static/media/environment.jpg": "static/media/environment.f8b830df.jpg",
   "static/media/globalWarming.jpg": "static/media/globalWarming.1401f348.jpg",
   "static/media/logo_export.svg": "static/media/logo_export.61b3460a.svg",
   "static/media/operacja.jpg": "static/media/operacja.9b56c68e.jpg",
+  "static/media/porazka.png": "static/media/porazka.b141dade.png",
   "static/media/skeleton.jpg": "static/media/skeleton.bb7fc357.jpg",
   "static/media/source-sans-pro-latin-200.woff": "static/media/source-sans-pro-latin-200.e00791c8.woff",
   "static/media/source-sans-pro-latin-200.woff2": "static/media/source-sans-pro-latin-200.3d06ebb9.woff2",
@@ -31,5 +32,6 @@
   "static/media/source-sans-pro-latin-900.woff": "static/media/source-sans-pro-latin-900.03101aad.woff",
   "static/media/source-sans-pro-latin-900.woff2": "static/media/source-sans-pro-latin-900.57036c00.woff2",
   "static/media/source-sans-pro-latin-900italic.woff": "static/media/source-sans-pro-latin-900italic.28a4bcda.woff",
-  "static/media/source-sans-pro-latin-900italic.woff2": "static/media/source-sans-pro-latin-900italic.e89d57e5.woff2"
+  "static/media/source-sans-pro-latin-900italic.woff2": "static/media/source-sans-pro-latin-900italic.e89d57e5.woff2",
+  "static/media/stostowane.png": "static/media/stostowane.b62e3404.png"
 }
