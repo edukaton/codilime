@@ -7,6 +7,7 @@ export const metricApply = {
     ownInterpretation: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
     fakeSource: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
     misleading: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    honest: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
     share: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
     opinionVsFact: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
     emotionalLoad: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
@@ -21,7 +22,7 @@ export const metricUnApply = {
     ownInterpretation: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
     fakeSource: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
     misleading: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
-    cherryPicking: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    honest: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
     share: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
     opinionVsFact: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
     emotionalLoad: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
@@ -30,12 +31,12 @@ export const metricUnApply = {
 
 export const toolData = {
     capslock: {
-        displayName: 'Caps Lock',
-        helpText: 'WTEEDY JEST MOCNO I DOBRZE WIADOMO',
+        displayName: 'Wielkie litery',
+        helpText: 'helptext wielkich liter',
     },
     exclamation: {
-        displayName: 'Wykrzykniki / dodatkowe znaki zapytania w tytule',
-        helpText: '!!!! Bo to ważne !!! ! ! ',
+        displayName: 'Dodaj wykrzyknik/znak zapytania',
+        helpText: 'helptext wykrzykników',
     },
     sensationalImage: {
         displayName: 'Modyfikacja obrazka',
@@ -46,19 +47,19 @@ export const toolData = {
         helpText: 'helptext zmodyfikowanego zdjęcia',
     },
     opinionVsFact: {
-        displayName: 'Opinia vs fakt',
+        displayName: 'Opinia a fakt',
         helpText: 'helptext opinii vs faktu',
     },
     sensationalText: {
-        displayName: 'Sensacyjne hasło',
+        displayName: 'Dodaj snsacyjne hasło',
         helpText: 'helptext sensacyjnego hasła',
     },
     emotionalLoad: {
-        displayName: 'Nacechuj emocjonalnie',
+        displayName: 'Nacechowanie emocjonalne',
         helpText: 'helptext nacechowania emocjonalnego',
     },
     addedLinks: {
-        displayName: 'Dodaj linki',
+        displayName: 'Dodanie rzetelnego źródła',
         helpText: 'helptext linków',
     },
     ownInterpretation: {
@@ -70,16 +71,15 @@ export const toolData = {
         helpText: 'helptext dodania interpretacji',
     },
     misleading: {
-        displayName: 'Wprowadzanie w błąd',
+        displayName: 'Wprowadzenie w błąd',
         helptext: 'help help help',
     },
-    cherryPicking: {
-        displayName: 'Wybiórczość w doborze faktów',
-        helpText: 'Wybiórczość helptext'
+    honest: {
+        displayName: 'Rzetelna informacja',
+        helpText: 'Rzetelny helptext',
     },
     share: {
-        displayName: 'Udostępnianie w mediach społecznościowych',
-        helpText: 'Share helptext'
+        displayName: 'Udostępnij w mediach społecznościowych',
+        helpText: 'Share helptext',
     },
-
 };
