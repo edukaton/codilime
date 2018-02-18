@@ -1,16 +1,17 @@
 html, body, #root, .App {
-  height: 100%;
+  height: 99%;
   background: linear-gradient(180deg, #0B0936 0%, #0F0928 100%);
   color: #FFFFFF;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 500;
   text-shadow: 0 2px 4px 0 rgba(80, 227, 194, 0.36); }
 
 .siema {
   color: #24DDB4;
   letter-spacing: 3px;
-  line-height: 40px; }
+  line-height: 40px;
+  cursor: pointer; }
 
 .name-form {
   flex-direction: row; }
@@ -28,7 +29,7 @@ html, body, #root, .App {
     flex-direction: row;
     flex-grow: 1; }
   .LearningPage .head, .TaskPage .head {
-    height: 150px;
+    height: 250px;
     display: flex;
     flex-direction: row; }
     .LearningPage .head .title, .TaskPage .head .title {
@@ -45,11 +46,11 @@ html, body, #root, .App {
     width: 350px; }
   .LearningPage .side, .TaskPage .side {
     flex-grow: 1;
-    min-width: 200px;
-    padding: 40px; }
+    min-width: 200px; }
   .LearningPage .bottom, .TaskPage .bottom {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    height: 350px; }
     .LearningPage .bottom .sliders, .TaskPage .bottom .sliders {
       flex-grow: 3;
       padding: 40px;
@@ -102,10 +103,17 @@ html, body, #root, .App {
 .Popover-body {
   display: inline-flex;
   flex-direction: column;
-  padding: 2rem 4rem;
-  background: #454545;
+  background-color: #312C56;
+  width: 50vw;
+  padding: 2rem;
   color: white;
   border-radius: 0.3rem; }
+
+.logo-head {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .Popover-tipShape {
   fill: #454545; }
@@ -115,6 +123,9 @@ html, body, #root, .App {
   flex-direction: row;
   justify-content: space-around; }
 
+.navText {
+  font-size: 16px; }
+
 .circle {
   width: 40px;
   height: 40px;
@@ -122,7 +133,8 @@ html, body, #root, .App {
   -webkit-border-radius: 50px;
   border: 3px solid #FFF;
   border-radius: 50px;
-  text-align: center; }
+  text-align: center;
+  font-size: 32px; }
 
 .tool {
   border: #4285f4;
@@ -154,4 +166,8 @@ button {
   box-shadow: 0 4px 13px 0 #50E3C2;
   background-color: transparent;
   color: #ffff;
-  font-size: 24px; }
+  font-size: 24px;
+  cursor: pointer; }
+  button.rozgrzej-button {
+    height: 70px;
+    width: 288px; }

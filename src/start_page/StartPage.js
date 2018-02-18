@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {STATES} from './../consts';
+import Logo from "../components/logo";
 
 class StartPage extends Component {
     constructor(props) {
@@ -21,21 +22,31 @@ class StartPage extends Component {
             mainContent =
                 <div>
                     <div style={{padding: '150px'}}>
-                        <h3><span className={'title-like'}>{mainState.username}</span>, liczmy na Ciebie!</h3>
-                        <span>
-                        Phasellus a est nulla. Quisque in maximus sem. Quisque lobortis imperdiet libero non dapibus. Donec interdum sapien mi, nec blandit est posuere vel. Duis elementum lacinia nunc, vel ultricies purus.
-                        </span>
-
-                        <button onClick={() => transferTo(STATES.LEARNING)}>
-                            ROZGRZEJ TOSTER
-                        </button>
+                        <div className={'logo-head'}>
+                            <Logo/> INFOTOSTER
+                        </div>
+                        <h3><span className={'title-like'}>{mainState.username}</span>, zostajesz blogerem,
+                            który przechwytuje toster do tworzenia
+                            gorących newsów.</h3>
+                            <span>
+                                Zobacz, jak tworzyć treści popularne w Internecie. Pamiętaj jednak: zależy Ci na budowaniu wiarygodnego bloga!
+                                Poćwicz na Infotosterze przekształcanie tekstu tak, aby stał się chętniej czytany. Przekonaj się również, jak w ten sposób zmieniony artykuł może wpływać na otoczenie.
+                            </span>
+                        <div style={{textAlign: 'center', padding: '10px'}}>
+                            <button
+                                className={'rozgrzej-button'}
+                                onClick={() => transferTo(STATES.LEARNING)}
+                            >
+                                ROZGRZEJ TOSTER
+                            </button>
+                        </div>
                     </div>
                 </div>;
         }
         else if (greeted) {
             mainContent =
                 <div>
-                    <span className={'title-like'}>🍞 JAK SIE NAZYWASZ?</span>
+                    <span className={'title-like'}><Logo/> JAK SIE NAZYWASZ?</span>
                     <div className={'name-form'}>
                         <input type="text" onChange={this.handleChange}/>
                         <button onClick={() => setState({username: value})}>JEDZIEMY</button>
@@ -45,7 +56,8 @@ class StartPage extends Component {
             mainContent = <div
                                 onClick={() => this.setState({greeted: true})}
                                 className={'siema'}
-                            > SIEMA </div>
+            > <div style={{padding:'10px'}}> <Logo/> </div>
+                            <div style={{padding: '10px'}}>SIEMA</div> </div>
         }
         return (
             <div className={'StartPage'}>

@@ -1,11 +1,11 @@
 html, body, #root, .App {
-  height: 100%;
+  height: 99%;
   background: linear-gradient(180deg, #0B0936 0%, #0F0928 100%);
   color: #FFFFFF;
 
   font-family: "Source Sans Pro", sans-serif;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 500;
   text-shadow: 0 2px 4px 0 rgba(80,227,194,0.36);
 }
 
@@ -13,6 +13,7 @@ html, body, #root, .App {
   color: #24DDB4;
   letter-spacing: 3px;
   line-height: 40px;
+  cursor: pointer;
 }
 
 .name-form {
@@ -36,7 +37,7 @@ html, body, #root, .App {
   }
 
   .head {
-    height: 150px;
+    height: 250px;
     display: flex;
     flex-direction: row;
     .title {
@@ -60,12 +61,13 @@ html, body, #root, .App {
   .side {
     flex-grow: 1;
     min-width: 200px;
-    padding: 40px;
   }
 
   .bottom {
     display: flex;
     flex-direction: row;
+    height: 350px;
+
     .sliders {
       flex-grow: 3;
       padding: 40px;
@@ -135,19 +137,32 @@ html, body, #root, .App {
 .Popover-body {
   display: inline-flex;
   flex-direction: column;
-  padding: 2rem 4rem;
-  background: hsl(0, 0%, 27%);
+  background-color: #312C56;
+  width: 50vw;
+  padding: 2rem;
   color: white;
   border-radius: 0.3rem;
+}
+
+.logo-head {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Popover-tipShape {
   fill: hsl(0, 0%, 27%)
 }
+
 .toolbox-head {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.navText {
+  font-size: 16px;
 }
 
 .circle {
@@ -158,6 +173,7 @@ html, body, #root, .App {
   border: 3px solid #FFF;
   border-radius: 50px;
   text-align: center;
+  font-size: 32px;
 }
 
 .tool {
@@ -195,4 +211,10 @@ button {
   background-color: rgba(0,0,0,0);
   color: #ffff;
   font-size: 24px;
+  cursor: pointer;
+
+  &.rozgrzej-button {
+    height: 70px;
+    width: 288px;
+  }
 }

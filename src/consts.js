@@ -25,13 +25,14 @@ export const modalStyle = {
         overflow: 'auto',
         WebkitOverflowScrolling: 'touch',
         outline: 'none',
-        padding: '20px',
+        padding: '5px',
 
         height: '563px',
         width: '1029px',
         borderRadius: '6px',
         background: '#0E082A',
         boxShadow: '0 2px 20px 9px rgba(0,0,0,0.22)',
+        fontSize: '15px',
     }
 };
 

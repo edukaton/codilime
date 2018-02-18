@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {STATES} from "../consts";
+import Logo from "../components/logo";
 
 class ResultsPage extends Component {
   render() {

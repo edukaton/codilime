@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {modalStyle, STATES} from "../consts";
-import Modal from 'react-modal';
+import Popover from 'react-popover';
+import Logo from "../components/logo";
 import Toolbox from "../components/Toolbox";
 import DiscoverableText from "../components/DiscoverableText";
 
@@ -17,9 +18,19 @@ class LearningPage extends Component {
         return (
             <div className={'LearningPage'}>
                 <div className={'head'}>
-                    <div onClick={() => this.props.transferTo(STATES.START)}><span>{'(<)'}</span>Na poczatek</div>
+                    <div className={'navText'} onClick={() => this.props.transferTo(STATES.START)}>
+                        <div className={'circle'}>{'<'}</div>NA POCZĄTEK</div>
                     <div className={'title'}>
-                        🍞 INFOTOSTER.rozgrzewka
+                        <div style={{padding: '10px'}}>
+                            <Popover
+                                isOpen={!mainState.modalsHidden[STATES.LEARNING]}
+                                preferPlace={'below'}
+                                onOuterAction={() => this.props.setState((prevState) => ({modalsHidden:{[STATES.LEARNING]:true, ...prevState.modalsHidden}}))}
+                                body={<div>Czy coś nie pasuje Ci w tekście po lewej? Spróbuj kliknąć na fragmenty tekstu, co do których masz wątpliwości.</div>}>
+                                    <Logo/>
+                            </Popover>
+                        </div>
+                        INFOTOSTER.rozgrzewka
                     </div>
                 </div>
                 <div className={'main'}>
@@ -44,16 +55,6 @@ class LearningPage extends Component {
                         </button>
                     </div>
                 </div>
-                <Modal
-                    isOpen={!mainState.modalsHidden[STATES.LEARNING]}
-                    style={modalStyle}
-                >
-                    <h1 id="heading">{mainState.username}, własnie wchodzisz do trybu rozgrzewki</h1>
-                    <div id="full_description">
-                        <p>Description goes here.</p>
-                        <button onClick={() => this.props.setState((prevState) => ({modalsHidden:{[STATES.LEARNING]:true, ...prevState.modalsHidden}}))}>Jasne</button>
-                    </div>
-                </Modal>
             </div>
         );
     }
