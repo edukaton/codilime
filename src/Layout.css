@@ -68,16 +68,53 @@ html, body, #root, .App {
       flex-grow: 0;
       min-width: 200px; }
 
-.ResultsPage, .StartPage {
+.StartPage {
   display: flex;
   align-items: center;
   align-content: space-around;
   justify-content: center;
   justify-items: center;
   height: 100%; }
-  .ResultsPage > div, .StartPage > div {
+  .StartPage > div {
     display: flex;
     flex-direction: column; }
+
+.ResultsPage {
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+  justify-items: center;
+  height: 100%;
+  padding: 70px; }
+  .ResultsPage > div {
+    display: flex;
+    flex-direction: column; }
+  .ResultsPage img {
+    height: 258px;
+    width: 612px;
+    margin-left: 200px; }
+  .ResultsPage button {
+    width: 200px;
+    margin-left: 300px; }
+  .ResultsPage .bottom {
+    display: flex;
+    flex-direction: row; }
+    .ResultsPage .bottom .sliders {
+      flex-grow: 3;
+      padding: 40px;
+      display: flex;
+      flex-direction: row; }
+      .ResultsPage .bottom .sliders > div {
+        flex-grow: 1;
+        padding: 10px; }
+    .ResultsPage .bottom .buttons {
+      align-items: center;
+      justify-items: center;
+      display: flex;
+      padding: 40px;
+      flex-grow: 0;
+      min-width: 200px; }
 
 .active-target {
   animation-name: color;

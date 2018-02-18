@@ -90,7 +90,7 @@ html, body, #root, .App {
   }
 }
 
-.ResultsPage, .StartPage {
+.StartPage {
   display: flex;
   align-items: center;
   align-content: space-around;
@@ -101,6 +101,57 @@ html, body, #root, .App {
   > div {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.ResultsPage {
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+  justify-items: center;
+
+  height: 100%;
+  padding: 70px;
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    height: 258px;
+    width: 612px;
+    margin-left: 200px;
+  }
+
+  button {
+    width: 200px;
+    margin-left: 300px;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+
+    .sliders {
+      flex-grow: 3;
+      padding: 40px;
+      display: flex;
+      flex-direction: row;
+      >div {
+        flex-grow: 1;
+        padding: 10px;
+      }
+    }
+
+    .buttons {
+      align-items: center;
+      justify-items: center;
+      display: flex;
+      padding: 40px;
+      flex-grow: 0;
+      min-width: 200px;
+    }
   }
 }
 
