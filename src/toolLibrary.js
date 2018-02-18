@@ -1,11 +1,30 @@
 export const metricApply = {
-    capslock: ({A, B, C, D}) => ({A: A+20, B: B-10, C: C-15, D}),
-    exclamation: ({A, B, C, D}) => ({A: A-30, B: B+10, C: C+25, D}),
+    capslock: ({A, B, C, D}) => ({A: A + 20, B: B - 10, C: C - 15, D}),
+    exclamation: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    sensationalImage: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    sensationalText: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    addedLinks: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    ownInterpretation: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    fakeSource: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    misleading: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    share: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    opinionVsFact: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    emotionalLoad: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
 };
 
 export const metricUnApply = {
-    capslock: ({A, B, C, D}) => ({A: A-20, B: B+10, C: C+15, D}),
-    exclamation: ({A, B, C, D}) => ({A: A+30, B: B-10, C: C-25, D}),
+    capslock: ({A, B, C, D}) => ({A: A - 20, B: B + 10, C: C + 15, D}),
+    exclamation: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    sensationalImage: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    sensationalText: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    addedLinks: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    ownInterpretation: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    fakeSource: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    misleading: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    cherryPicking: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    share: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    opinionVsFact: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    emotionalLoad: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
 };
 
 
@@ -18,9 +37,9 @@ export const toolData = {
         displayName: 'Wykrzykniki / dodatkowe znaki zapytania w tytule',
         helpText: '!!!! Bo to ważne !!! ! ! ',
     },
-    rescaledImage: {
-        displayName: 'Skalowanie obrazka',
-        helpText: 'helptext przeskalowania zdjęcia',
+    sensationalImage: {
+        displayName: 'Modyfikacja obrazka',
+        helpText: 'helptext modyfikacji zdjęcia',
     },
     modifiedImage: {
         displayName: 'Modyfikacja obrazka',
@@ -46,4 +65,21 @@ export const toolData = {
         displayName: 'Dodanie interpretacji',
         helpText: 'helptext dodania interpretacji',
     },
+    fakeSource: {
+        displayName: 'Dodanie fałszywego źrodła',
+        helpText: 'helptext dodania interpretacji',
+    },
+    misleading: {
+        displayName: 'Wprowadzanie w błąd',
+        helptext: 'help help help',
+    },
+    cherryPicking: {
+        displayName: 'Wybiórczość w doborze faktów',
+        helpText: 'Wybiórczość helptext'
+    },
+    share: {
+        displayName: 'Udostępnianie w mediach społecznościowych',
+        helpText: 'Share helptext'
+    },
+
 };
