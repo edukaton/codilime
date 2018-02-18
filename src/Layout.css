@@ -1,0 +1,80 @@
+html, body, #root, .App {
+  height: 100%; }
+
+.LearningPage, .TaskPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+  .LearningPage .main, .TaskPage .main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1; }
+  .LearningPage .head, .TaskPage .head {
+    height: 50px;
+    display: flex;
+    flex-direction: row; }
+    .LearningPage .head .title, .TaskPage .head .title {
+      flex-grow: 1; }
+    .LearningPage .head div, .TaskPage .head div {
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      display: flex; }
+  .LearningPage .text, .TaskPage .text {
+    flex-grow: 3;
+    padding: 40px;
+    overflow-y: auto; }
+  .LearningPage .side, .TaskPage .side {
+    flex-grow: 0;
+    min-width: 200px;
+    padding: 40px; }
+  .LearningPage .bottom, .TaskPage .bottom {
+    display: flex;
+    flex-direction: row; }
+    .LearningPage .bottom .sliders, .TaskPage .bottom .sliders {
+      flex-grow: 3;
+      padding: 40px; }
+    .LearningPage .bottom .buttons, .TaskPage .bottom .buttons {
+      align-items: center;
+      justify-items: center;
+      display: flex;
+      padding: 40px;
+      flex-grow: 0;
+      min-width: 200px; }
+
+.active-target {
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
+
+.manipulated-target {
+  color: firebrick;
+  cursor: pointer; }
+
+.active-tool {
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
+
+@keyframes color {
+  0% {
+    color: #222; }
+  50% {
+    color: #4285f4; }
+  100% {
+    color: #222; } }
+
+.Popover-body {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  background: #454545;
+  color: white;
+  border-radius: 0.3rem; }
+
+.Popover-tipShape {
+  fill: #454545; }
+
+.tool {
+  border: #4285f4;
+  padding: 10px; }
