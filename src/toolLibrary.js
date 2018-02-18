@@ -11,11 +11,39 @@ export const metricUnApply = {
 
 export const toolData = {
     capslock: {
-        displayName: 'WIELKIE LITERY',
+        displayName: 'Caps Lock',
         helpText: 'WTEEDY JEST MOCNO I DOBRZE WIADOMO',
     },
     exclamation: {
-        displayName: 'Wykrzykniki!!!',
+        displayName: 'Wykrzykniki / dodatkowe znaki zapytania w tytule',
         helpText: '!!!! Bo to ważne !!! ! ! ',
-    }
-}
+    },
+    rescaledImage: {
+        displayName: 'Skalowanie obrazka',
+        helpText: 'helptext przeskalowania zdjęcia',
+    },
+    modifiedImage: {
+        displayName: 'Modyfikacja obrazka',
+        helpText: 'helptext zmodyfikowanego zdjęcia',
+    },
+    opinionVsFact: {
+        displayName: 'Opinia vs fakt',
+        helpText: 'helptext opinii vs faktu',
+    },
+    sensationalText: {
+        displayName: 'Sensacyjne hasło',
+        helpText: 'helptext sensacyjnego hasła',
+    },
+    emotionalLoad: {
+        displayName: 'Nacechuj emocjonalnie',
+        helpText: 'helptext nacechowania emocjonalnego',
+    },
+    addedLinks: {
+        displayName: 'Dodaj linki',
+        helpText: 'helptext linków',
+    },
+    ownInterpretation: {
+        displayName: 'Dodanie interpretacji',
+        helpText: 'helptext dodania interpretacji',
+    },
+};
