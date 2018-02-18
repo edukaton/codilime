@@ -32,54 +32,50 @@ export const metricUnApply = {
 export const toolData = {
     capslock: {
         displayName: 'Wielkie litery',
-        helpText: 'helptext wielkich liter',
+        helpText: 'Napisanie słowa wielkimi literami przyciąga do niego uwagę czytelnika i wzmaga sensacyjny wydźwięk.',
     },
     exclamation: {
         displayName: 'Dodaj wykrzyknik/znak zapytania',
-        helpText: 'helptext wykrzykników',
+        helpText: 'Wykrzykniki i znaki zapytania (zwłaszcza zwielokrotnione) powodują emocjonalny wydźwięk zdania i przykuwają uwagę.',
     },
     sensationalImage: {
         displayName: 'Modyfikacja obrazka',
-        helpText: 'helptext modyfikacji zdjęcia',
-    },
-    modifiedImage: {
-        displayName: 'Modyfikacja obrazka',
-        helpText: 'helptext zmodyfikowanego zdjęcia',
+        helpText: 'Dodanie intrygujących zdjęć i obrazków przykuwa wzrok i zwiększa klikalność posta.',
     },
     opinionVsFact: {
         displayName: 'Opinia a fakt',
-        helpText: 'helptext opinii vs faktu',
+        helpText: 'Przedstawienie opinii w postaci faktu powoduje, że post wydaje się bardziej wiarygodny, ale jest to fałszowaniem informacji.',
     },
     sensationalText: {
         displayName: 'Dodaj sensacyjne hasło',
-        helpText: 'helptext sensacyjnego hasła',
+        helpText: 'Sensacyjne hasła najlepiej przyciągają uwagę! Uważaj, żeby jednak nie przesadzić.',
     },
     emotionalLoad: {
         displayName: 'Nacechowanie emocjonalne',
-        helpText: 'helptext nacechowania emocjonalnego',
+        helpText: 'Dodanie emocjonalnych słów sprawia, że czytelnik bardziej utożsamia się z informacją.',
     },
     addedLinks: {
         displayName: 'Dodanie rzetelnego źródła',
-        helpText: 'helptext linków',
+        helpText: 'Rzetelne źródła uwiarygadniają podawane informacje i zwiększają użyteczność tekstu.',
     },
     ownInterpretation: {
         displayName: 'Dodanie interpretacji',
-        helpText: 'helptext dodania interpretacji',
+        helpText: 'Dodanie własnej interpretacji przekazywanych faktów może pomóc w odbiorze newsa, ale trzeba uważać, aby nie zniekształcić pierwotnej informacji.',
     },
     fakeSource: {
         displayName: 'Dodanie fałszywego źrodła',
-        helpText: 'helptext dodania interpretacji',
+        helpText: 'Niesprawdzone źródła pokazują, że autor dzieli się treścią, która być może jest fałszywa.',
     },
     misleading: {
         displayName: 'Wprowadzenie w błąd',
-        helptext: 'help help help',
+        helptext: 'Jest to bardzo negatywna zmiana w tekście, która zniekształca informację i rozpowszechnia nieprawdziwe newsy.',
     },
     honest: {
         displayName: 'Rzetelna informacja',
-        helpText: 'Rzetelny helptext',
+        helpText: 'Prawdziwe, sprawdzone informacje to prawdziwy skarb - właśnie tego oczekują Twoi czytelnicy.',
     },
     share: {
         displayName: 'Udostępnij w mediach społecznościowych',
-        helpText: 'Share helptext',
+        helpText: 'Umożliwienie łatwego dzielenia się informacją w Internecie pomaga newsowi zdobyć popularność.',
     },
 };
