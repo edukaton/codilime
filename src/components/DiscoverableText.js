@@ -6,12 +6,13 @@ import globalWarming from '../globalWarming.jpg'
 
 class DiscoverableText extends Component {
     render() {
-        const {onToolDiscover} = this.props;
+        const {onToolDiscover, setState} = this.props;
 
         return (
             <div>
                 <h1>
                     <DiscoverableChunk
+          setState={setState}
                         toolname={'capslock'}
                         callback={onToolDiscover}
                         question={QUESTIONS[1]}
@@ -20,6 +21,7 @@ class DiscoverableText extends Component {
                     </DiscoverableChunk>
                     ? Czy dzieci trafią do szpitala
                     <DiscoverableChunk
+          setState={setState}
                         toolname={'exclamation'}
                         callback={onToolDiscover}
                         question={QUESTIONS[2]}
@@ -28,6 +30,7 @@ class DiscoverableText extends Component {
                     </DiscoverableChunk>
                 </h1>
                 <DiscoverableChunk
+          setState={setState}
                     toolname={'sensationalImage'}
                     callback={onToolDiscover}
                     question={QUESTIONS[3]}>
@@ -36,11 +39,13 @@ class DiscoverableText extends Component {
                 <div>
                     W jednej z gdańskich podstawówek zgłoszono
                     <DiscoverableChunk
+          setState={setState}
                         toolname={'ownInterpretation'}
                         callback={onToolDiscover}
                         question={QUESTIONS[4]}> aż </DiscoverableChunk>
                     4 przypadki zachorowań na
                     <DiscoverableChunk
+          setState={setState}
                         toolname={'addedLinks'}
                         callback={() => {
                             onToolDiscover('addedLinks');
@@ -50,6 +55,7 @@ class DiscoverableText extends Component {
                     Na razie nie ma jeszcze informacji na temat nadchodzącej epidemii i czy konieczna
                     będzie hospitalizacja wszystkich dzieci, ale&nbsp;
                     <DiscoverableChunk
+          setState={setState}
                         toolname={'emotionalLoad'}
                         callback={onToolDiscover}
                         question={QUESTIONS[6]}>
@@ -59,12 +65,14 @@ class DiscoverableText extends Component {
 
                 <h1>
                     <DiscoverableChunk
+          setState={setState}
                         toolname={'sensationalText'}
                         callback={onToolDiscover}
                         question={QUESTIONS[7]}>
                         NAJNOWSZE DONIESIENIA!!! </DiscoverableChunk>
                     Globalne ocieplenie podważone???</h1>
                 <DiscoverableChunk
+          setState={setState}
                     toolname={'sensationalImage'}
                     callback={onToolDiscover}
                     question={QUESTIONS[8]}>
@@ -72,12 +80,14 @@ class DiscoverableText extends Component {
                 </DiscoverableChunk>
                 <div>
                     <DiscoverableChunk
+          setState={setState}
                         toolname={'opinionVsFact'}
                         callback={onToolDiscover}
                         question={QUESTIONS[9]}>
                         Dr John Irons uważa, że </DiscoverableChunk>
                     nie ma stuprocentowej pewności, że globalne ocieplenie ma miejsce.&nbsp;
                     <DiscoverableChunk
+          setState={setState}
                         toolname={'honest'}
                         callback={() => {
                             onToolDiscover('honest');
@@ -88,6 +98,7 @@ class DiscoverableText extends Component {
                         potwierdzać.</DiscoverableChunk>
                 </div>
                 <DiscoverableChunk
+          setState={setState}
                     toolname={'share'}
                     callback={onToolDiscover}
                     question={QUESTIONS[11]}>

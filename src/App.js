@@ -11,9 +11,11 @@ import 'typeface-source-sans-pro';
 
 const INITIAL_STATE = {
     currentPage: STATES.LEARNING,
+    modalBody: <div/>,
     toolbox: {},
     appliedTools: {},
     modalsHidden: {},
+    modalHidden: true,
     metrics: {
         A: 20,
         B: 20,
@@ -66,7 +68,16 @@ class App extends Component {
 
     transferTo = (pageName) => {
         this.setState({currentPage: pageName});
+
+        if(intros[pageName]){
+            this.setState({modalBody: intros[pageName], modalHidden:false});
+        }
     }
+}
+
+const intros = {
+    [STATES.LEARNING]: <div>Czy coś nie pasuje Ci w tekście po lewej? Spróbuj kliknąć na fragmenty tekstu, co do których masz wątpliwości.</div>,
+    [STATES.TASK]: <div>Czas na Twojego tosta! Klikaj w narzędzia po prawej, by wyszedł pyszny i chrupiący.</div>,
 }
 
 export default App;

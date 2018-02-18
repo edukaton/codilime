@@ -9,30 +9,25 @@ class DiscoverableChunk extends Component {
     }
 
     render() {
-        const { children, callback, toolname, question } = this.props;
+        const { children, callback, toolname, question, setState } = this.props;
         const { popoverVisible } = this.state;
 
         const answer = (correct) => {
-            this.setState({popoverVisible:false});
+            this.props.setState({modalHidden:true});
             return callback(toolname);
         };
 
-        return <Popover
-                    isOpen={popoverVisible}
-                    preferPlace={'below'}
-                    onOuterAction={() => this.setState({popoverVisible: false})}
-                    body={<div>
-                        {question.text}
-                        {question.answers.map((answerText, index) =>
-                            <div key={index} onClick={() => answer(index === question.correctAnswer)}>
-                                🔁 {answerText}
-                            </div>)}
-                    </div>}
-                >
-                    <span onClick={() => this.setState({popoverVisible: true})}>
+        const questionBody = <div>
+            {question.text}
+            {question.answers.map((answerText, index) =>
+                <div key={index} onClick={() => answer(index === question.correctAnswer)}>
+                    🔁 {answerText}
+                </div>)}
+        </div>
+
+        return <span onClick={() => setState({modalBody: questionBody, modalHidden:false})}>
                         {children}
-                    </span>
-        </Popover>;
+                    </span>;
     }
 }
 

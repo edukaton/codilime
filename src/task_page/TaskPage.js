@@ -53,12 +53,11 @@ class TaskPage extends Component {
                     <div className={'navText'} onClick={() => this.props.transferTo(STATES.LEARNING)}>
                         <div className={'circle'}>{'<'}</div>DO ROZGRZEWKI</div>
                     <div className={'title'}>
-
                         <Popover
-                            isOpen={!mainState.modalsHidden[STATES.TASK]}
+                            isOpen={!mainState.modalHidden}
                             preferPlace={'below'}
-                            onOuterAction={() => this.props.setState((prevState) => ({modalsHidden:{[STATES.TASK]:true, ...prevState.modalsHidden}}))}
-                            body={<div>Czas na Twojego tosta! Klikaj w narzędzia po prawej, by wyszedł pyszny i chrupiący.</div>}>
+                            onOuterAction={() => this.props.setState({modalHidden:true})}
+                            body={mainState.modalBody}>
                             <Logo/>
                         </Popover>
                         INFOTOSTER.tostowanie

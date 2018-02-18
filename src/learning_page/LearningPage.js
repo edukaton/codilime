@@ -6,6 +6,10 @@ import Logo from "../components/logo";
 import Toolbox from "../components/Toolbox";
 import DiscoverableText from "../components/DiscoverableText";
 
+const showModal = (setState, body) => {
+    setState({modalBody: body, modalHidden:false});
+}
+
 class LearningPage extends Component {
     constructor(props) {
         super(props);
@@ -24,10 +28,10 @@ class LearningPage extends Component {
                     <div className={'title'}>
                         <div style={{padding: '10px'}}>
                             <Popover
-                                isOpen={!mainState.modalsHidden[STATES.LEARNING]}
+                                isOpen={!mainState.modalHidden}
                                 preferPlace={'below'}
-                                onOuterAction={() => this.props.setState((prevState) => ({modalsHidden:{[STATES.LEARNING]:true, ...prevState.modalsHidden}}))}
-                                body={<div>Czy coś nie pasuje Ci w tekście po lewej? Spróbuj kliknąć na fragmenty tekstu, co do których masz wątpliwości.</div>}>
+                                onOuterAction={() => this.props.setState({modalHidden:true})}
+                                body={mainState.modalBody}>
                                     <Logo/>
                             </Popover>
                         </div>
@@ -38,6 +42,7 @@ class LearningPage extends Component {
                     <div className={'text'}>
                         <DiscoverableText
                             onToolDiscover={this.onToolDiscover}
+                            setState={setState}
                         />
                     </div>
                     <div className={'side'}>
@@ -60,14 +65,20 @@ class LearningPage extends Component {
         );
     }
 
-    onToolDiscover = (tool) => this.props.setState((prevState) =>
-                            ({
-                                toolbox:
-                                    {
-                                        [tool]: {},
-                                        ...prevState.toolbox
-                                    }
-                            }));
+    onToolDiscover = (tool) => {
+        if(toPairs(this.props.mainState.toolbox).length === 2) {
+            this.props.setState({modalBody: <div>Masz wystarczająco dużo narzędzi, by przejść do trybu tostowania</div>, modalHidden: false})
+        }
+
+        return this.props.setState((prevState) =>
+            ({
+                toolbox:
+                    {
+                        [tool]: {},
+                        ...prevState.toolbox
+                    }
+            }));
+    };
 }
 
 export default LearningPage;
