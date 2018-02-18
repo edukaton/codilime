@@ -7,6 +7,7 @@ export const metricApply = {
     ownInterpretation: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
     fakeSource: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
     misleading: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
+    honest: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
     share: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
     opinionVsFact: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
     emotionalLoad: ({A, B, C, D}) => ({A: A - 30, B: B + 10, C: C + 25, D}),
@@ -21,7 +22,7 @@ export const metricUnApply = {
     ownInterpretation: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
     fakeSource: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
     misleading: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
-    cherryPicking: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
+    honest: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
     share: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
     opinionVsFact: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
     emotionalLoad: ({A, B, C, D}) => ({A: A + 30, B: B - 10, C: C - 25, D}),
@@ -58,7 +59,7 @@ export const toolData = {
         helpText: 'helptext nacechowania emocjonalnego',
     },
     addedLinks: {
-        displayName: 'Dodaj linki',
+        displayName: 'Dodanie rzetelnego źródła',
         helpText: 'helptext linków',
     },
     ownInterpretation: {
@@ -70,16 +71,15 @@ export const toolData = {
         helpText: 'helptext dodania interpretacji',
     },
     misleading: {
-        displayName: 'Wprowadzanie w błąd',
+        displayName: 'Wprowadzenie w błąd',
         helptext: 'help help help',
     },
-    cherryPicking: {
-        displayName: 'Wybiórczość w doborze faktów',
-        helpText: 'Wybiórczość helptext',
+    honest: {
+        displayName: 'Rzetelna informacja',
+        helpText: 'Rzetelny helptext',
     },
     share: {
         displayName: 'Udostępnij w mediach społecznościowych',
         helpText: 'Share helptext',
     },
-
 };

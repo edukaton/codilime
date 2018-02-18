@@ -78,8 +78,11 @@ class DiscoverableText extends Component {
                         Dr John Irons uważa, że </DiscoverableChunk>
                     nie ma stuprocentowej pewności, że globalne ocieplenie ma miejsce.&nbsp;
                     <DiscoverableChunk
-                        toolname={'cherryPicking'}
-                        callback={onToolDiscover}
+                        toolname={'honest'}
+                        callback={() => {
+                            onToolDiscover('honest');
+                            onToolDiscover('misleading')
+                        }}
                         question={QUESTIONS[10]}>
                         Ostatnia fala ochłodzenia w południowej Anglii nie wydaje się tego
                         potwierdzać.</DiscoverableChunk>
